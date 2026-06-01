@@ -258,6 +258,7 @@ main {
 
 #projects-grid {
 	flex-shrink: 0;
+	isolation: isolate;
 	--fade-width: 2em;
 	--actual-padding: 2em;
 	display: flex;
@@ -313,6 +314,7 @@ main {
 	&::after {
 		display: inline-block;
 		position: sticky;
+		z-index: 1;
 		width: var(--fade-width);
 		height: 100%;
 		content: '';
