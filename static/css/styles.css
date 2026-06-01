@@ -312,7 +312,7 @@ main {
 	&::before,
 	&::after {
 		display: inline-block;
-		position: absolute;
+		position: sticky;
 		width: var(--fade-width);
 		height: 100%;
 		content: '';
@@ -320,12 +320,12 @@ main {
 
 	&::before {
 		top: 0;
-		left: 0;
+		left: calc(var(--fade-width) * -2);
 		background: linear-gradient(to right, var(--bg-2), transparent)
 	}
 
 	&::after {
-		right: 0;
+		right: calc(var(--fade-width) * -2);
 		bottom: 0;
 		background: linear-gradient(to left, var(--bg-2), transparent)
 	}
