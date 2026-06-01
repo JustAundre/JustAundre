@@ -8,8 +8,8 @@
 }
 
 :root {
-	--header-height: 56px;
-	--footer-height: 52px;
+	--header-height: 2.5rem;
+	--footer-height: 2.5rem;
 }
 
 /* Default to dark theme if invalid value is found */
@@ -78,6 +78,9 @@ body {
 	background: var(--bg-1);
 	width: 100%;
 	height: 100svh;
+	@media (max-height: 350px) {
+		grid-template-rows: var(--header-height) 350px var(--footer-height);
+	}
 }
 
 @keyframes dummy {
@@ -227,12 +230,16 @@ main {
 
 #sidebar {
 	position: relative;
+	flex-shrink: 0;
 	border: var(--accent) 1px solid;
 	border-right: color-mix(var(--accent) 50%, var(--bg-2)) 1px solid;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
-	width: 30%;
+	width: fit-content;
 	min-width: 350px;
+	max-width: 30%;
+	height: 100%;
+	min-height: 16em;
 	overflow: auto;
 
 	@media (orientation: portrait) {
@@ -250,8 +257,9 @@ main {
 }
 
 #projects-grid {
+	flex-shrink: 0;
 	--fade-width: 2em;
-	--actual-padding: 1em;
+	--actual-padding: 2em;
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -266,7 +274,9 @@ main {
 	padding-right: calc(var(--fade-width) + var(--actual-padding));
 	padding-left: calc(var(--fade-width) + var(--actual-padding));
 	width: 100%;
+	max-width: 70%;
 	height: 100%;
+	min-height: 16em;
 	overflow: auto;
 	list-style-type: none;
 
@@ -321,9 +331,8 @@ main {
 	}
 
 	@media (orientation: portrait) {
-		flex-shrink: 0;
 		flex-direction: row;
-		width: 90vw;
+		max-width: 90vw;
 
 		&::before,
 		&::after {
