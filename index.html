@@ -4,11 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The ASS Suite</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://unpkg.com" crossorigin="">
-	<link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
 	<link rel="stylesheet" href="/static/css/styles.css">
 	<script src="/static/js/scripts.js" defer=""></script>
 	<script src="/static/js/ass.js" defer=""></script>
@@ -67,19 +62,24 @@
 	</aside>
 	<ul id="projects-grid">
 		<li class="project-card divergent-accent" style="--accent-hue: 50;">
-			<h2><a href="#">BullSH</a></h3>
+			<h2><a href="/docs?q=bullsh">BullSH</a></h3>
 			<span>Threats have since advanced from programs to people and programs, but people have room for trickery.</span><br>
 			<span class="subtext">Probably never going to be used on a real server.</span>
+		</li>
+		<li class="project-card divergent-accent" style="--accent-hue: 320;">
+			<h2><a href="#">Custom Dependencies</a></h3>
+			<span>More bash scripts fashioned into commands to reduce redundancy across my projects.</span><br>
+			<span class="subtext">Consistent, clean, short.</span>
 		</li>
 		<li class="project-card divergent-accent" style="--accent-hue: 160;">
 			<h2><a href="#">Hardening Scripts</a></h3>
 			<span>Scripts to audit every corner of your server, to bring it back from the depths of hell.</span><br>
 			<span class="subtext">Although, realistically, you would just do a clean install.</span>
 		</li>
-		<li class="project-card divergent-accent" style="--accent-hue: 320;">
-			<h2><a href="#">Custom Dependencies</a></h3>
-			<span>More bash scripts fashioned into commands to reduce redundancy across my projects.</span><br>
-			<span class="subtext">Consistent, clean, short.</span>
+		<li id="my-card" class="project-card divergent-accent" style="--accent-hue: 80;">
+			<h2><a href="/docs?q=about-me">About Me</a></h3>
+			<span>Oh, you wanna know more about <em>me</em>? How exciting!</span><br>
+			<span class="subtext">If you couldn't already tell I love cybersecurity!</span>
 		</li>
 		<li class="project-card divergent-accent" style="--accent-hue: 200;">
 			<h2><a href="#">Password Generator</a></h3>
@@ -89,12 +89,7 @@
 		<li class="project-card divergent-accent" style="--accent-hue: 0;">
 			<h2><a href="#">Documents</a></h3>
 			<span>A collection of guides and documents/write-ups from CCDCs I have partaken in.</span><br>
-			<span class="subtext">Available in both the source Markdown and rendered PDFs.</span>
-		</li>
-		<li id="my-card" class="project-card divergent-accent" style="--accent-hue: 80;">
-			<h2><a href="/docs/about-me.html">About Me</a></h3>
-			<span>Oh, you wanna know more about <em>me</em>? How exciting!</span><br>
-			<span class="subtext">If you couldn't already tell I love cybersecurity!</span>
+			<span class="subtext">Rendered by some patchwork but hand-crafted CSS.</span>
 		</li>
 	</ul>
 	<div id="background"></div>

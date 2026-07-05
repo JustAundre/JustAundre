@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Documents</title>
+	<link rel="stylesheet" href="/static/css/docs.css">
+</head>
+
+<body class="markdown-body">
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked-alert/dist/index.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+<script>
+	marked.setOptions({
+		gfm: true,
+		breaks: true
+	});
+	marked.use(window.markedAlert.default ? window.markedAlert.default() : window.markedAlert());
+
+	(async function() {
+		try {
+			const query = new URLSearchParams(window.location.search).get('q');
+			const url = `${window.location.origin}/docs/${query}.md`;
+			const response = await fetch(url);
+			const md = await response.text();
+			document.querySelector('body').innerHTML = marked.parse(md);
+			if (window.Prism) {
+				Prism.highlightAll();
+			}
+		} catch (error) {
+			console.error(`${error}`);
+		}
+	})();
+</script>
+
+</html>
