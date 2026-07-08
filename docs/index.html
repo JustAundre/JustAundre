@@ -4,16 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Documents</title>
+	<link rel="stylesheet" href="/static/css/styles.css">
 	<link rel="stylesheet" href="/static/css/docs.css">
+	<script src="/static/js/scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked-alert/dist/index.umd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
 </head>
 
-<body class="markdown-body">
+<body>
+	<header>
+		<button aria-label="Return Home" onclick="window.location.href='/'"><i class="icon-home"></i></button>
+		<button aria-label="Open Settings" onclick="openConfig()"><i class="icon-settings"></i></button>
+	</header>
+	<main id="blog-content"></main>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked-alert/dist/index.umd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
 <script>
 	marked.setOptions({
 		gfm: true,
@@ -27,7 +34,7 @@
 			const url = `${window.location.origin}/docs/${query}.md`;
 			const response = await fetch(url);
 			const md = await response.text();
-			document.querySelector('body').innerHTML = marked.parse(md);
+			document.querySelector('#blog-content').innerHTML =  marked.parse(md);
 			if (window.Prism) {
 				Prism.highlightAll();
 			}

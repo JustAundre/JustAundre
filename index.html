@@ -5,51 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The ASS Suite</title>
 	<link rel="stylesheet" href="/static/css/styles.css">
+	<link rel="stylesheet" href="/static/css/ass.css">
 	<script src="/static/js/scripts.js" defer=""></script>
 	<script src="/static/js/ass.js" defer=""></script>
 </head>
 <body>
 
-<dialog id="config-menu" data-theme="dark">
-	<form method="dialog">
-		<h1>Which do you prefer?</h1>
-		<label class="option" aria-label="Enable light mode">
-			<i class="icon-sun-moon"></i>
-			<span>Enable light mode</span>
-			<div class="switch">
-				<input type="checkbox" id="toggle-theme">
-				<div class="slider">
-				<i class="icon-check state-text"></i>
-				<i class="icon-x state-text"></i>
-				</div>
-			</div>
-		</label>
-		<label class="option" aria-label="Enable motion" aria-describedby="motion-performance-warning">
-			<i class="icon-move"></i>
-			<span>Enable motion</span>
-			<div class="switch">
-				<input type="checkbox" id="toggle-motion">
-				<div class="slider">
-				<i class="icon-check state-text"></i>
-				<i class="icon-x state-text"></i>
-				</div>
-			</div>
-		</label>
-		<span class="subtext" id="motion-performance-warning">* Impacts performance with software rendering.</span>
-		<label class="option" aria-label="Use a dyslexic-friendly font">
-			<i class="icon-type-outline"></i>
-			<span data-dyslexic="true">Enable dyslexia-friendly font</span>
-			<div class="switch">
-				<input type="checkbox" id="toggle-dyslexic">
-				<div class="slider">
-				<i class="icon-check state-text"></i>
-				<i class="icon-x state-text"></i>
-				</div>
-			</div>
-		</label>
-		<button type="submit" id="enter-site" onclick="commitConfig()">Continue</button>
-	</form>
-</dialog>
 <header id="root-header">
 	<button aria-label="Open Settings" onclick="openConfig()"><i class="icon-settings"></i></button>
 </header>
@@ -87,9 +48,9 @@
 			<span class="subtext">Supports CLI args/opts!</span>
 		</li>
 		<li class="project-card divergent-accent" style="--accent-hue: 0;">
-			<h2><a href="#">Documents</a></h3>
-			<span>A collection of guides and documents/write-ups from CCDCs I have partaken in.</span><br>
-			<span class="subtext">Rendered by some patchwork but hand-crafted CSS.</span>
+			<h2><a href="/docs?q=shell-syntax-guide">Shell Syntax Guide</a></h3>
+			<span>Everything you need to know about shell script syntax, for scripters by a scripter.</span><br>
+			<span class="subtext">"A scripter" referring to me, who writes almost nothing but shell script. 😭</span>
 		</li>
 	</ul>
 	<div id="background"></div>
