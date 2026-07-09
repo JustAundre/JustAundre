@@ -204,7 +204,7 @@ table tbody+tbody {
 	display: inline-block;
 	fill: currentColor;
 	vertical-align: text-bottom;
-	overflow: visible !important;
+	overflow: visible;
 	margin-right: var(--base-size-8);
 }
 
@@ -239,9 +239,9 @@ pre {
 pre,
 code {
 	background-color: var(--bg-2);
-	white-space: pre-wrap !important;
-	overflow-wrap: break-word !important;
-	word-break: normal !important;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	word-break: normal;
 	tab-size: 4;
 	border: var(--bg-3) solid 1px;
 }
