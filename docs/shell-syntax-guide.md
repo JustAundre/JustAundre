@@ -2,9 +2,9 @@
 
 > [!IMPORTANT]
 >
-> This guide relies on an understanding of general concepts of UNIX systems, though hyper-links/footnotes are present where likely needed. 
+> This guide depends on your understanding of general concepts in UNIX systems. Though, hyperlinks/footnotes are present where likely needed. 
 >
-> This covers the syntax for shell script. However, a majority of the function of a script comes from the actual commands, and by extension, a majority of shell script writing is based on remembering the commands for certain actions.
+> This covers the syntax for shell script, but much of a script's meaning comes from the commands. You'll need to learn the right commands for the job elsewhere.
 
 ## Help You Help Yourself
 
