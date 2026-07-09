@@ -46,8 +46,7 @@ Of course, there’s regular text arguments (see figure 1 below) but there’s a
 echo "Hello!"
 
 # Figure 2
-# Ditto, but with a "-n", which disables printing
-# the leading newline.
+# Ditto, but with a "-n", which disables printing the leading newline.
 echo -n "Hello!"
 
 # Figure 3
@@ -123,8 +122,7 @@ Again, unlike Python, statements can mix and match delimiters—it’s better to
 ```bash 
 #!/usr/bin/env bash
 
-# A crime against humanity, thou who scripts like this
-# shall be ensnared in the circles of hell.
+# The below is a crime against humanity, thou who scripts like this shall be ensnared in the fires of hell.
 if # Newline delimiter
 command-a # No, indentation won't affect interpretation.
 then # Another newline delimiter
@@ -148,14 +146,11 @@ The opening and closing curly brackets `{}` are used to group multiple commands 
 > #!/usr/bin/env bash
 > {
 > 	# Print "Hello!"
-> 	# The ">&2" redirects the "Hello!" to fd2/stderr,
->	# which will make it hidden due to the
-> 	# directive attached to the command group.
+> 	# The ">&2" redirects the "Hello!" to fd2/stderr, which will make it hidden due to the directive attached to the command group.
 > 	echo "Hello!" >&2
 >
 > 	# Gives the user a prompt and assigns it to a variable.
-> 	# Note: the read command actually prints its provided
->   # prompt to fd2/stderr so 2>&1 is present to revert that 
+> 	# Note: the read command actually prints its provided prompt to fd2/stderr so 2>&1 is present to revert that 
 > 	read -r -p 'How are you?: ' answer_variable 2>&1
 >
 > 	# This is a dummy, non-existent command and will print an error.
@@ -212,13 +207,10 @@ Non-persistent inter-process communication between 2 ephemeral processes.
 Signified by the vertical pipe `|` character, redirects the stdout/fd1 of `command-a` to the stdin of `command-b` . (Examples below)
 
 ```bash
-# Tells bc (basic calculator) to resolve 1+1
-# the bc command doesn't take args, it evaluates from stdin
+# Tells bc (basic calculator) to resolve 1+1. The bc command doesn't take args, it evaluates from stdin
 echo "1+1" | bc
 
-# Finds all lines containing the substring "xyz" in the hosts file,
-# then tee outputs it to stdout AND writes it to a file named
-# results.txt in your CWD (current working directory).
+# Finds all lines containing the substring "xyz" in the hosts file, then tee outputs it to stdout AND writes it to a file named results.txt in your CWD (current working directory).
 grep "xyz" '/etc/hosts' | tee './results.txt'
 ```
 
@@ -246,9 +238,7 @@ echo 'Hello! This is a line of text.' >>'/tmp/named_pipe'
 The Ampersand `&` backgrounds a process when appended to the end of a command like so:
 
 ```bash
-# This waits 10 seconds from the time of execution,
-# then prints "hi" to the terminal while letting
-# you run other commands in the meantime.
+# This waits 10 seconds from the time of execution, then prints "hi" to the terminal while letting you run other commands in the meantime.
 { sleep 10; echo 'hi'; } &
 ```
 
@@ -268,9 +258,7 @@ Disowning a process means the parent process (in this scenario, your terminal) c
 The opening angle bracket `<` feeds data into the command to the left from the file path on the right as seen below:
 ```bash 
 while read -r line; do
-
 	echo "Line recieved: ${line}"
-
 done <'data.txt'
 
 ```
