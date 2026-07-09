@@ -317,8 +317,9 @@ pre tt {
 	color: var(--danger);
 }
 
-/* hides buttons during printing */
-header {
+/* Hides the header and footer during printing */
+header,
+footer {
 	@media print {
 		display: none;
 	}
