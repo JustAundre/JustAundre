@@ -157,7 +157,7 @@ table {
 table th,
 table td {
 	vertical-align: top;
-	border-top: 1px solid var(--text-color);
+	border-top: 1px solid var(--text-1);
 	padding: var(--base-size-8);
 	line-height: calc(4rem / 3);
 }

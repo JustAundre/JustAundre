@@ -50,7 +50,7 @@ html,
 		position: absolute;
 		cursor: pointer;
 		inset: 0;
-		border-radius: calc(1px/0);
+		border-radius: 9e9px;
 		background-color: oklch(20% 0 300);
 
 		[data-motion='true'] & {
@@ -232,12 +232,18 @@ header {
 		height: 2em;
 		color: var(--text-1);
 
-		&:hover i,
-		&:focus-visible i {
+		&:not([disabled]):hover i,
+		&:not([disabled]):focus-visible i {
 			scale: 1.1;
+			cursor: pointer;
 		}
 
-		&:active i {
+		&:not([disabled]):active i {
+			scale: .8;
+		}
+
+		&[disabled] i {
+			opacity: .5;
 			scale: .8;
 		}
 
