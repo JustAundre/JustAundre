@@ -25,12 +25,12 @@
 
 [data-theme="light"]:root {
 	--neutral: #091016;
-    --info: #004194;
-    --success: #0b3d10;
-    --attention: #966700;
-    --danger: #7e0a04;
-    --done: #5612cb;
-    --border-default: #b4bcc5;
+	--info: #004194;
+	--success: #0b3d10;
+	--attention: #966700;
+	--danger: #7e0a04;
+	--done: #5612cb;
+	--border-default: #b4bcc5;
 }
 
 html {
@@ -263,11 +263,11 @@ pre tt {
 	border-left: .25em solid var(--border-default);
 }
 
-.markdown-alert > :first-child {
+.markdown-alert> :first-child {
 	margin-top: 0;
 }
 
-.markdown-alert > :last-child {
+.markdown-alert> :last-child {
 	margin-bottom: 0;
 }
 
@@ -325,7 +325,7 @@ header {
 }
 
 /* Token colors */
-[data-theme="dark"] .token {
+.token {
 	&.atrule {
 		color: #c792ea;
 	}
@@ -470,145 +470,145 @@ header {
 }
 
 [data-theme="light"] .token {
-&.atrule {
-        color: #49176b;
-    }
+	&.atrule {
+		color: #49176b;
+	}
 
-    &.attr-value {
-        color: #2b4f05;
-    }
+	&.attr-value {
+		color: #2b4f05;
+	}
 
-    &.attribute {
-        color: #2b4f05;
-    }
+	&.attribute {
+		color: #2b4f05;
+	}
 
-    &.boolean {
-        color: #49176b;
-    }
+	&.boolean {
+		color: #49176b;
+	}
 
-    &.builtin {
-        color: #946100;
-    }
+	&.builtin {
+		color: #946100;
+	}
 
-    &.cdata {
-        color: #0d322e;
-    }
+	&.cdata {
+		color: #0d322e;
+	}
 
-    &.char {
-        color: #239084;
-    }
+	&.char {
+		color: #239084;
+	}
 
-    &.class {
-        color: #946100;
-    }
+	&.class {
+		color: #946100;
+	}
 
-    &.class-name {
-        color: #000200;
-    }
+	&.class-name {
+		color: #000200;
+	}
 
-    &.comment {
-        color: #454545;
-    }
+	&.comment {
+		color: #454545;
+	}
 
-    &.constant {
-        color: #49176b;
-    }
+	&.constant {
+		color: #49176b;
+	}
 
-    &.deleted {
-        color: #990000;
-    }
+	&.deleted {
+		color: #990000;
+	}
 
-    &.doctype {
-        color: #a1a1a1;
-    }
+	&.doctype {
+		color: #a1a1a1;
+	}
 
-    &.entity {
-        color: #990000;
-    }
+	&.entity {
+		color: #990000;
+	}
 
-    &.function {
-        color: #49176b;
-    }
+	&.function {
+		color: #49176b;
+	}
 
-    &.hexcode {
-        color: #000200;
-    }
+	&.hexcode {
+		color: #000200;
+	}
 
-    &.id {
-        color: #49176b;
-        font-weight: bold;
-    }
+	&.id {
+		color: #49176b;
+		font-weight: bold;
+	}
 
-    &.important {
-        color: #49176b;
-        font-weight: bold;
-    }
+	&.important {
+		color: #49176b;
+		font-weight: bold;
+	}
 
-    &.inserted {
-        color: #0d322e;
-    }
+	&.inserted {
+		color: #0d322e;
+	}
 
-    &.keyword {
-        color: #49176b;
-    }
+	&.keyword {
+		color: #49176b;
+	}
 
-    &.number {
-        color: #8f2603;
-    }
+	&.number {
+		color: #8f2603;
+	}
 
-    &.operator {
-        color: #0d322e;
-    }
+	&.operator {
+		color: #0d322e;
+	}
 
-    &.prolog {
-        color: #a1a1a1;
-    }
+	&.prolog {
+		color: #a1a1a1;
+	}
 
-    &.property {
-        color: #0d322e;
-    }
+	&.property {
+		color: #0d322e;
+	}
 
-    &.pseudo-class {
-        color: #2b4f05;
-    }
+	&.pseudo-class {
+		color: #2b4f05;
+	}
 
-    &.pseudo-element {
-        color: #2b4f05;
-    }
+	&.pseudo-element {
+		color: #2b4f05;
+	}
 
-    &.punctuation {
-        color: #005273;
-    }
+	&.punctuation {
+		color: #005273;
+	}
 
-    &.regex {
-        color: #000200;
-    }
+	&.regex {
+		color: #000200;
+	}
 
-    &.selector {
-        color: #a70000;
-    }
+	&.selector {
+		color: #a70000;
+	}
 
-    &.string {
-        color: #094d00;
-    }
+	&.string {
+		color: #094d00;
+	}
 
-    &.symbol {
-        color: #49176b;
-    }
+	&.symbol {
+		color: #49176b;
+	}
 
-    &.tag {
-        color: #990000;
-    }
+	&.tag {
+		color: #990000;
+	}
 
-    &.unit {
-        color: #8f2603;
-    }
+	&.unit {
+		color: #8f2603;
+	}
 
-    &.info {
-        color: #990000;
-    }
+	&.info {
+		color: #990000;
+	}
 
-    &.variable {
-        color: #990000;
-    }
+	&.variable {
+		color: #990000;
+	}
 }
