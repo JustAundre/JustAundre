@@ -226,7 +226,7 @@ header {
 		align-items: center;
 		text-align: center;
 		border: var(--text-1) solid 1px;
-		border-radius: calc(1px / 0);
+		border-radius: 9e9px;
 		background: var(--bg-2);
 		aspect-ratio: 1/1;
 		height: 2em;
