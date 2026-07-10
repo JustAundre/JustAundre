@@ -154,13 +154,13 @@ main {
 	&::before {
 		top: 0;
 		left: calc(var(--fade-width) * -2);
-		background: linear-gradient(to right, var(--bg-2), transparent)
+		background: linear-gradient(to right, var(--bg-2), transparent);
 	}
 
 	&::after {
 		right: calc(var(--fade-width) * -2);
 		bottom: 0;
-		background: linear-gradient(to left, var(--bg-2), transparent)
+		background: linear-gradient(to left, var(--bg-2), transparent);
 	}
 
 	@media (orientation: portrait),
@@ -177,11 +177,11 @@ main {
 		}
 
 		&::before {
-			background: linear-gradient(to bottom, var(--bg-2), transparent)
+			background: linear-gradient(to bottom, var(--bg-2), transparent);
 		}
 
 		&::after {
-			background: linear-gradient(to top, var(--bg-2), transparent)
+			background: linear-gradient(to top, var(--bg-2), transparent);
 		}
 	}
 }
