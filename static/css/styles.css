@@ -160,7 +160,7 @@ html {
 	box-sizing: border-box;
 	border: unset;
 	background: oklch(0 0 0 / .9);
-	width: 100vw;
+	width: 100dvw;
 	max-width: unset;
 	height: 100dvh;
 	max-height: unset;
@@ -194,7 +194,7 @@ html {
 
 	form {
 		display: grid;
-		width: 25vw;
+		width: 25svw;
 		min-width: 15em;
 		max-width: 25em;
 		height: fit-content;

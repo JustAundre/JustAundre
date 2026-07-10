@@ -49,7 +49,7 @@ function openConfig() {
 		document.body.prepend(configMenu);
 	}
 	configMenu.showModal();
-	configMenu.setAttribute('open', '');
+	configMenu.setAttribute('open', ''); // So, for some reason .showModal() does not make CSS register that the `open` property is now present, so...
 }
 
 function commitConfig() {

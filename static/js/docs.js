@@ -11,7 +11,7 @@ marked.use(window.markedAlert.default ? window.markedAlert.default() : window.ma
 		const url = `${window.location.origin}/docs/${query}.md`;
 		const response = await fetch(url);
 		const md = await response.text();
-		document.querySelector('#blog-content').innerHTML =  marked.parse(md);
+		document.querySelector('#blog-content').innerHTML = marked.parse(md);
 		if (window.Prism) {
 			Prism.highlightAll();
 		}

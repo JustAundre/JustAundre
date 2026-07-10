@@ -44,7 +44,6 @@ ul,
 aside {
 	box-sizing: border-box;
 	margin: unset;
-	border-radius: 12px;
 	background: var(--bg-2);
 	padding: 2em;
 	width: 100%;
@@ -53,10 +52,13 @@ aside {
 
 main {
 	display: flex;
-	padding: 2em;
 	max-height: 100%;
 	overflow: auto;
 	scroll-snap-type: y mandatory;
+
+	@media (min-height: 500px) {
+		padding: 2em;
+	}
 
 	> * {
 		scroll-snap-align: start;
@@ -66,8 +68,11 @@ main {
 #sidebar {
 	position: relative;
 	flex-shrink: 0;
-	border: var(--accent) 1px solid;
 	border-right: color-mix(var(--accent) 50%, var(--bg-2)) 1px solid;
+	@media (min-height: 500px) {
+		border: var(--accent) 1px solid;
+		border-radius: 1em;
+	}
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	width: fit-content;
@@ -78,16 +83,7 @@ main {
 
 	@media (orientation: portrait),
 	(max-height: 32ch) {
-		width: 80vw;
-	}
-
-	> nav {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		border-top: color-mix(var(--accent) 50%, var(--bg-2)) 1px solid;
-		width: 100%;
-		height: var(--footer-height);
+		width: 80dvw;
 	}
 }
 
@@ -101,7 +97,10 @@ main {
 	flex-wrap: wrap;
 	justify-content: safe center;
 	gap: 1em;
-	border: var(--accent) 1px solid;
+	@media (min-height: 500px) {
+		border: var(--accent) 1px solid;
+		border-radius: 1em;
+	}
 	border-left: unset;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
@@ -128,12 +127,14 @@ main {
 			margin: unset;
 		}
 
-		&:hover {
-			scale: 1.025;
-		}
+		@media (min-height: 500px) {
+			&:hover {
+				scale: 1.025;
+			}
 
-		&:active {
-			scale: .975;
+			&:active {
+				scale: .975;
+			}
 		}
 
 		[data-motion='true'] & {
@@ -167,7 +168,7 @@ main {
 	(max-height: 32ch) {
 		flex-direction: row;
 		padding: unset;
-		max-width: 90vw;
+		max-width: 90svw;
 
 		&::before,
 		&::after {
@@ -220,7 +221,7 @@ main {
 	box-sizing: border-box;
 	border-bottom: var(--accent) 1px solid;
 	background: var(--bg-2);
-	padding: 12px;
+	padding: .5em;
 	width: 100%;
 	height: 100%;
 
