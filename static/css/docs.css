@@ -4,6 +4,14 @@
 	inherits: true;
 }
 
+@font-face {
+	font-style: normal;
+	font-weight: normal;
+	src: url('/static/fonts/Vollkorn-Regular.ttf') format('truetype');
+	font-family: 'Vollkorn';
+	font-display: swap;
+}
+
 :root {
 	/* Colors */
 	--neutral: #f0f6fc;
@@ -20,7 +28,7 @@
 	--base-size-16: 1rem;
 	--base-size-24: 1.5rem;
 	--base-text-weight-medium: 500;
-	--font-stack-mono: "Cascadia Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+	--font-stack-docs: Vollkorn, Palatino, Times;
 }
 
 [data-theme="light"]:root {
@@ -42,8 +50,7 @@ body {
 	margin: auto;
 	max-width: 650px;
 	color: var(--text-1);
-	line-height: 1.4;
-	font-family: "Vollkorn", Palatino, Times;
+	font-family: var(--font-stack-docs), var(--font-stack-base);
 }
 
 h1 {
@@ -54,6 +61,7 @@ h2 {
 	padding-top: 2em;
 	font-weight: normal;
 
+	/* Always put h2 elements on a new page when printing */
 	@media print {
 		break-before: page;
 	}
@@ -317,7 +325,7 @@ pre tt {
 	color: var(--danger);
 }
 
-/* Hides the header and footer during printing */
+/* Hide header/footer during print */
 header,
 footer {
 	@media print {
@@ -325,7 +333,7 @@ footer {
 	}
 }
 
-/* Token colors */
+/* Prism Token colors */
 .token {
 	&.atrule {
 		color: #c792ea;

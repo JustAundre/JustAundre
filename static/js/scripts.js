@@ -31,7 +31,7 @@ configMenu.innerHTML = `
 	<span class="subtext" id="motion-performance-warning">* May impact old devices.</span>
 	<label class="option" aria-label="Use a dyslexic-friendly font">
 		<i class="icon-type-outline"></i>
-		<span data-dyslexic="true">Enable dyslexic font</span>
+		<span class="font-stack-dyslexic">Enable dyslexic font</span>
 		<div class="switch">
 			<input type="checkbox" id="toggle-dyslexic">
 			<div class="slider">
@@ -56,11 +56,11 @@ function commitConfig() {
 	const theme = toggleTheme.checked ? 'light' : 'dark';
 	const motion = toggleMotion.checked ? 'true' : 'false';
 	const dyslexic = toggleDyslexic.checked ? 'true' : 'false';
-	
+
 	root.setAttribute('data-theme', theme);
 	root.setAttribute('data-motion', motion);
 	document.body.setAttribute('data-dyslexic', dyslexic);
-	
+
 	const config = { theme, motion, dyslexic };
 	localStorage.setItem('userConfig', JSON.stringify(config));
 }
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (savedConfig) {
 		root.setAttribute('data-theme', savedConfig.theme);
 		root.setAttribute('data-motion', savedConfig.motion);
-		document.body.setAttribute('data-dyslexic', savedConfig.dyslexic);
+		root.setAttribute('data-dyslexic', savedConfig.dyslexic);
 
 		toggleTheme.checked = (savedConfig.theme === 'light');
 		toggleMotion.checked = (savedConfig.motion === 'true');
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		} else {
 			root.setAttribute('data-motion', 'false');
 		}
-		document.body.setAttribute('data-dyslexic', 'false');
+		root.setAttribute('data-dyslexic', 'false');
 		openConfig();
 	}
 });
