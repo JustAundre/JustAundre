@@ -14,46 +14,6 @@
 </head>
 <body>
 
-<dialog id="config-menu" data-theme="dark">
-	<form method="dialog">
-		<h1>Which do you prefer?</h1>
-		<label class="option" aria-label="Enable light mode">
-			<i class="icon-sun-moon"></i>
-			<span>Enable light mode</span>
-			<div class="switch">
-				<input type="checkbox" id="toggle-theme">
-				<div class="slider">
-				<i class="icon-check state-text"></i>
-				<i class="icon-x state-text"></i>
-				</div>
-			</div>
-		</label>
-		<label class="option" aria-label="Enable motion" aria-describedby="motion-performance-warning">
-			<i class="icon-move"></i>
-			<span>Enable motion</span>
-			<div class="switch">
-				<input type="checkbox" id="toggle-motion">
-				<div class="slider">
-				<i class="icon-check state-text"></i>
-				<i class="icon-x state-text"></i>
-				</div>
-			</div>
-		</label>
-		<span class="subtext" id="motion-performance-warning">* Impacts performance with software rendering.</span>
-		<label class="option" aria-label="Use a dyslexic-friendly font">
-			<i class="icon-type-outline"></i>
-			<span data-dyslexic="true">Enable dyslexia-friendly font</span>
-			<div class="switch">
-				<input type="checkbox" id="toggle-dyslexic">
-				<div class="slider">
-				<i class="icon-check state-text"></i>
-				<i class="icon-x state-text"></i>
-				</div>
-			</div>
-		</label>
-		<button type="submit" id="enter-site" onclick="commitConfig()">Continue</button>
-	</form>
-</dialog>
 <header>
 	<button aria-label="Open Settings" onclick="openConfig()"><i class="icon-settings"></i></button>
 </header>
