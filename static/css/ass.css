@@ -127,8 +127,9 @@ main {
 		width: 42ch;
 		height: fit-content;
 
-		h3 {
+		h2 {
 			margin: unset;
+			width: fit-content;
 		}
 
 		@media (min-height: 500px) {
@@ -136,13 +137,14 @@ main {
 				scale: 1.025;
 			}
 
-			&:active {
+			/* Don't bounce the card up and down if the user's probably just trying to select text or click a link. */
+			&:active:not(:has(:active)) {
 				scale: .975;
 			}
 		}
 
 		[data-motion='true'] & {
-			transition: scale 50ms linear;
+			transition: scale 100ms ease-out;
 		}
 	}
 
