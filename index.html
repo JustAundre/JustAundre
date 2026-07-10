@@ -11,10 +11,13 @@
 </head>
 <body>
 
-<header id="root-header">
+<header class="button-row">
 	<button aria-label="Open Settings" onclick="openConfig()"><i class="icon-settings"></i></button>
+	<a href="#start"><button aria-label="Scroll to sidebar"><i class="icon-move-left"></i></button></a>
+	<a href="#end"><button aria-label="Scroll to project cards"><i class="icon-move-right"></i></button></a>
 </header>
 <main>
+	<div id="start"></div>
 	<aside id="sidebar">
 		<h1>Aundre's Shell Script Suite</h1>
 		<span class="subtext">Pick a card, any card; it's all Bash anyways.</span>
@@ -52,6 +55,7 @@
 			<span class="subtext">"A scripter" referring to me, who writes almost nothing but shell script. 😭</span>
 		</li>
 	</ul>
+	<div id="end"></div>
 	<div id="background"></div>
 </main>
 <footer id="root-footer">

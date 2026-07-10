@@ -38,7 +38,11 @@ html,
 
 html {
 	font-family: var(--font-stack-base);
-	transition: --accent-hue 2500ms ease-out;
+
+	&[data-motion="true"] {
+		transition: --accent-hue 2500ms ease-out;
+		scroll-behavior: smooth;
+	}
 }
 
 .switch {
@@ -224,18 +228,20 @@ html {
 	}
 }
 
-header {
+.button-row {
 	display: flex;
 	flex-direction: row;
 
-	button {
+	button,
+	a>button {
+		border: var(--text-1) solid 1px;
+		border-radius: 0;
+		border-inline-width: 0;
+		background: var(--bg-2);
 		display: flex;
 		justify-content: safe center;
 		align-items: center;
 		text-align: center;
-		border: var(--text-1) solid 1px;
-		border-radius: 9e9px;
-		background: var(--bg-2);
 		aspect-ratio: 1/1;
 		height: 2em;
 		color: var(--text-1);
@@ -258,18 +264,21 @@ header {
 		[data-motion="true"] & i {
 			transition: scale 50ms ease;
 		}
+	}
 
-		&:first-child:not(:last-child) {
-			border-top-right-radius: unset;
-			border-bottom-right-radius: unset;
-			border-right: unset;
-		}
+	> :first-child button,
+	>button:first-child {
+		border-top-left-radius: 9e9px;
+		border-bottom-left-radius: 9e9px;
+		border-left: var(--text-1) solid 1px;
 
-		&:last-child:not(:first-child) {
-			border-top-left-radius: unset;
-			border-bottom-left-radius: unset;
-			border-left: unset;
-		}
+	}
+
+	> :last-child button,
+	>button:last-child {
+		border-top-right-radius: 9e9px;
+		border-bottom-right-radius: 9e9px;
+		border-right: var(--text-1) solid 1px;
 	}
 }
 

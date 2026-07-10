@@ -61,7 +61,7 @@ main {
 		padding: 2em;
 	}
 
-	> * {
+	>* {
 		scroll-snap-align: start;
 	}
 }
@@ -70,10 +70,12 @@ main {
 	position: relative;
 	flex-shrink: 0;
 	border-right: color-mix(var(--accent) 50%, var(--bg-2)) 1px solid;
+
 	@media (min-height: 500px) {
 		border: var(--accent) 1px solid;
 		border-radius: 1em;
 	}
+
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	min-width: 350px;
@@ -98,10 +100,12 @@ main {
 	flex-wrap: wrap;
 	justify-content: safe center;
 	gap: 1em;
+
 	@media (min-height: 500px) {
 		border: var(--accent) 1px solid;
 		border-radius: 1em;
 	}
+
 	border-left: unset;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
@@ -113,7 +117,7 @@ main {
 	overflow: auto;
 	list-style-type: none;
 
-	> .project-card {
+	>.project-card {
 		margin-right: auto;
 		margin-left: auto;
 		border: var(--accent) 1px solid;
@@ -143,6 +147,7 @@ main {
 	}
 
 	@media (min-height: 500px) {
+
 		&::before,
 		&::after {
 			pointer-events: none;
@@ -218,7 +223,7 @@ main {
 	}
 }
 
-#root-header {
+header {
 	display: flex;
 	position: static;
 	align-items: center;
@@ -234,7 +239,7 @@ main {
 	}
 }
 
-#root-footer {
+footer {
 	position: static;
 	box-sizing: border-box;
 	border-top: var(--accent) 1px solid;

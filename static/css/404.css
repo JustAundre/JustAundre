@@ -5,7 +5,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	> img {
+
+	>img {
 		width: 700px;
 		height: 300px;
 		margin-top: 24px;
