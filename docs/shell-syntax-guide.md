@@ -109,9 +109,35 @@ fi
 
 ### While/Until
 
+While/until loops generally share the same structure, and are opposites—”while loops” will loop over the commands nested inside them so long as the command provided to them exits successfully without issue, and “until loops” will do the same but so long as the given command fails.
+
+```bash 
+while true; do
+	echo "This loop will spam this message until you kill it."
+done
+
+while false; do
+	echo "The false command always fails so the while loop will never send this message."
+done
+
+until true; do
+	echo "The true command never fails so this message will never be printed"
+done
+
+until false; do
+	echo "This'll spam until you kill the loop."
+done
+```
+
+
+
 ### For
 
+
+
 ### Case
+
+
 
 ### Formatting
 
