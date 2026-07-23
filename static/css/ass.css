@@ -100,15 +100,6 @@ main {
 	flex-wrap: wrap;
 	justify-content: safe center;
 	gap: 1em;
-
-	@media (min-height: 512px) {
-		border: var(--accent) 1px solid;
-		border-radius: 1em;
-	}
-
-	border-left: unset;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
 	isolation: isolate;
 	padding-right: calc(var(--fade-width) + var(--actual-padding));
 	padding-left: calc(var(--fade-width) + var(--actual-padding));
@@ -116,6 +107,13 @@ main {
 	height: 100%;
 	overflow: auto;
 	list-style-type: none;
+
+	@media (min-height: 512px) {
+		border: var(--accent) 1px solid;
+		border-left: unset;
+		border-top-right-radius: 1em;
+		border-bottom-right-radius: 1em;
+	}
 
 	>.project-card {
 		margin-right: auto;
@@ -133,26 +131,34 @@ main {
 		}
 	}
 
+	&::before,
+	&::after {
+		width: 100%;
+		height: var(--fade-width);
+		content: '';
+		position: sticky;
+		isolation: isolate;
+	}
+
+	&::before {
+		top: calc(var(--fade-width) * -2);
+		left: 0;
+		margin-bottom: calc(var(--fade-width) * -1);
+		background: linear-gradient(to bottom, var(--bg-2), transparent);
+	}
+
+	&::after {
+		bottom: calc(var(--fade-width) * -2);
+		left: 0;
+		background: linear-gradient(to top, var(--bg-2), transparent);
+	}
+
 	@media (orientation: portrait),
 	(max-height: 512px),
 	(max-width: 512px) {
-		padding: unset;
+		padding-left: unset;
+		padding-right: unset;
 		width: 80dvw;
-
-		&::before,
-		&::after {
-			width: 100%;
-			height: var(--fade-width);
-			content: '';
-		}
-
-		&::before {
-			background: linear-gradient(to bottom, var(--bg-2), transparent);
-		}
-
-		&::after {
-			background: linear-gradient(to top, var(--bg-2), transparent);
-		}
 	}
 }
 

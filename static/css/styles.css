@@ -14,9 +14,9 @@ html,
 [data-theme='dark'],
 [data-theme='dark'] .divergent-accent {
 	--accent: hsl(var(--accent-hue), 70%, 40%);
-	--bg-1: oklch(0.2 0.0125 var(--accent-hue));
-	--bg-2: oklch(0.15 0.00625 var(--accent-hue));
-	--bg-3: oklch(0.3 0.0425 var(--accent-hue));
+	--bg-1: oklch(0.15 0.0125 var(--accent-hue));
+	--bg-2: oklch(0.1 0.0125 var(--accent-hue));
+	--bg-3: oklch(0.2 0.025 var(--accent-hue));
 	--text-1: oklch(0.95 0.0625 var(--accent-hue));
 	--text-2: oklch(0.8 0.0625 var(--accent-hue));
 	--text-3: oklch(0.7 0.0625 var(--accent-hue));
@@ -231,13 +231,17 @@ html {
 .button-row {
 	display: flex;
 	flex-direction: row;
+	box-shadow: 0 0 1em var(--bg-3);
+	border-radius: 9e9px;
 
 	button,
 	a>button {
-		border: color-mix(in srgb, var(--text-1) 30%, var(--bg-1) 70%) solid 1px;
+		border: none;
+		border-top: color-mix(in srgb, var(--text-1) 30%, var(--bg-1) 70%) solid 1px;
 		border-radius: 0;
 		border-inline-width: 0;
-		background: linear-gradient(color-mix(in srgb, var(--bg-2) 90%, var(--text-1) 10%) 0%, var(--bg-2) 100%);
+		background: linear-gradient(color-mix(in srgb, var(--bg-2) 90%, var(--text-3) 10%) 0%, var(--bg-3) 100%);
+		isolation: isolate;
 		display: flex;
 		justify-content: safe center;
 		align-items: center;
