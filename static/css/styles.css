@@ -234,10 +234,10 @@ html {
 
 	button,
 	a>button {
-		border: var(--text-1) solid 1px;
+		border: color-mix(in srgb, var(--text-1) 30%, var(--bg-1) 70%) solid 1px;
 		border-radius: 0;
 		border-inline-width: 0;
-		background: var(--bg-2);
+		background: linear-gradient(color-mix(in srgb, var(--bg-2) 90%, var(--text-1) 10%) 0%, var(--bg-2) 100%);
 		display: flex;
 		justify-content: safe center;
 		align-items: center;
@@ -248,7 +248,8 @@ html {
 
 		&:not([disabled]):hover i,
 		&:not([disabled]):focus-visible i {
-			scale: 1.1;
+			transform: rotateZ(15deg);
+			transform-origin: center;
 			cursor: pointer;
 		}
 
@@ -262,7 +263,7 @@ html {
 		}
 
 		[data-motion="true"] & i {
-			transition: scale 50ms ease;
+			transition: transform 50ms linear;
 		}
 	}
 
@@ -270,7 +271,6 @@ html {
 	>button:first-child {
 		border-top-left-radius: 9e9px;
 		border-bottom-left-radius: 9e9px;
-		border-left: var(--text-1) solid 1px;
 
 	}
 
@@ -278,7 +278,6 @@ html {
 	>button:last-child {
 		border-top-right-radius: 9e9px;
 		border-bottom-right-radius: 9e9px;
-		border-right: var(--text-1) solid 1px;
 	}
 }
 

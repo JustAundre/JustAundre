@@ -34,8 +34,8 @@ body {
 	height: 100svh;
 
 	@media (orientation: portrait),
-	(max-height: 500px) {
-		grid-template-rows: var(--header-height) calc(500px - var(--header-height) - var(--footer-height)) var(--footer-height);
+	(max-height: 512px) {
+		grid-template-rows: var(--header-height) calc(512px - var(--header-height) - var(--footer-height)) var(--footer-height);
 	}
 }
 
@@ -57,7 +57,7 @@ main {
 	overflow: auto;
 	scroll-snap-type: y mandatory;
 
-	@media (min-height: 500px) {
+	@media (min-height: 512px) {
 		padding: 2em;
 	}
 
@@ -71,7 +71,7 @@ main {
 	flex-shrink: 0;
 	border-right: color-mix(var(--accent) 50%, var(--bg-2)) 1px solid;
 
-	@media (min-height: 500px) {
+	@media (min-height: 512px) {
 		border: var(--accent) 1px solid;
 		border-radius: 1em;
 	}
@@ -84,8 +84,8 @@ main {
 	overflow: auto;
 
 	@media (orientation: portrait),
-	(max-height: 500px),
-	(max-width: 500px) {
+	(max-height: 512px),
+	(max-width: 512px) {
 		width: 80dvw;
 	}
 }
@@ -96,12 +96,12 @@ main {
 	display: flex;
 	position: relative;
 	flex-shrink: 0;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: safe center;
 	gap: 1em;
 
-	@media (min-height: 500px) {
+	@media (min-height: 512px) {
 		border: var(--accent) 1px solid;
 		border-radius: 1em;
 	}
@@ -131,53 +131,11 @@ main {
 			margin: unset;
 			width: fit-content;
 		}
-
-		@media (min-height: 500px) {
-			&:hover {
-				scale: 1.025;
-			}
-
-			/* Don't bounce the card up and down if the user's probably just trying to select text or click a link. */
-			&:active:not(:has(:active)) {
-				scale: .975;
-			}
-		}
-
-		[data-motion='true'] & {
-			transition: scale 100ms ease-out;
-		}
-	}
-
-	@media (min-height: 500px) {
-
-		&::before,
-		&::after {
-			pointer-events: none;
-			display: inline-block;
-			position: sticky;
-			z-index: 1;
-			width: var(--fade-width);
-			height: 100%;
-			content: '';
-		}
-
-		&::before {
-			top: 0;
-			left: calc(var(--fade-width) * -2);
-			background: linear-gradient(to right, var(--bg-2), transparent);
-		}
-
-		&::after {
-			right: calc(var(--fade-width) * -2);
-			bottom: 0;
-			background: linear-gradient(to left, var(--bg-2), transparent);
-		}
 	}
 
 	@media (orientation: portrait),
-	(max-height: 500px),
-	(max-width: 500px) {
-		flex-direction: row;
+	(max-height: 512px),
+	(max-width: 512px) {
 		padding: unset;
 		width: 80dvw;
 
