@@ -2,8 +2,8 @@
 
 'Ello, I'm Aundre.
 
-I'm a high school student student studying Cybersecurity/I.T.,
-and I've dipped my toes into just a *tad* bit of game design/philosophy,
+I'm a high school student studying Cybersecurity
+who enjoys just a *tad* bit of game design/philosophy,
 enjoy a bit of creative writing, love marching band (*I love music in general*)
 and hope that life treats me well in the field of IT.
 
@@ -25,3 +25,5 @@ Full scripts (including ones as small as 50 lines) will never be fully-generated
 and changes suggested by AI will never be committed without thorough and full understanding of the code
 (applies to the aforementioned possible AI-assisted hotfixes),
 as I think of my work not only as a means to an end, but a form of the arts.
+
+P.S. Also, ***no***—the em dashes are not a sign of my using AI. I just like using them! >:C
